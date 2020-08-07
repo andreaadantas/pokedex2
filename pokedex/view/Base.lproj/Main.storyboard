@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,51 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLX-i5-GFr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                <color key="backgroundColor" red="0.20529863239999999" green="0.26981890200000003" blue="0.57257807250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="i7E-bH-byl"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ANC-k4-EmS">
+                                <rect key="frame" x="0.0" y="65" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6tF-BN-cGZ"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="L4R-o2-C1x">
+                                <rect key="frame" x="0.0" y="109" width="414" height="627"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MLX-i5-GFr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2mO-7Z-xch"/>
+                            <constraint firstItem="L4R-o2-C1x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7fC-SM-gap"/>
+                            <constraint firstItem="MLX-i5-GFr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9dG-i4-QXi"/>
+                            <constraint firstAttribute="trailing" secondItem="L4R-o2-C1x" secondAttribute="trailing" id="Jxh-EH-BZx"/>
+                            <constraint firstItem="L4R-o2-C1x" firstAttribute="top" secondItem="ANC-k4-EmS" secondAttribute="bottom" id="MeD-fZ-Mr6"/>
+                            <constraint firstItem="ANC-k4-EmS" firstAttribute="top" secondItem="MLX-i5-GFr" secondAttribute="bottom" id="OUE-W3-rvf"/>
+                            <constraint firstItem="ANC-k4-EmS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="REU-qL-FzS"/>
+                            <constraint firstItem="ANC-k4-EmS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Rbt-Xy-svA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L4R-o2-C1x" secondAttribute="bottom" id="feW-px-uF8"/>
+                            <constraint firstItem="MLX-i5-GFr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pBv-S4-s33"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="136.95652173913044"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg1" width="720" height="1280"/>
+    </resources>
 </document>
